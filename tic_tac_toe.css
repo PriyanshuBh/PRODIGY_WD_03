@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:  linear-gradient(#370849,#516395);/*linear-gradient(#9cd7ee,#FFDDE1); */
+}
+.app-container{
+    font-family:cursive ;
+    height: 50vw;
+    width: 100vw;
+    border: 0px solid rgb(148, 165, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(#370849,#516395);
+    color: rgb(95, 129, 240);
+    border-radius: 20px;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    gap: 1rem;
+}
+.status{
+    display: flex;
+    justify-content: space-between;
+    align-self:stretch;
+}
+.heading{
+    font-size: 2.5rem;
+   
+    /* text-decoration:underline rgb(0, 166, 255) 4px; */
+}
+#turn-data{
+    font-size: 3rem;
+}
+.game-board{
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3,8vw);
+    grid-template-rows: repeat(3,8vw);
+}
+.cell{
+    border: 2px solid rgb(230, 41, 41);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color: rgb(138, 97, 148);
+}
+.line{
+    text-decoration: line-through;
+}
+.restart-btn{
+   
+    border-color: #370849;
+    background-color:rgb(95, 129, 240);
+   border-radius: 18px;
+    font-style:italic;
+  border-style:calc();
+    padding: 1rem;
+}
+.game-board .cell0,
+.game-board .cell1,
+.game-board .cell2{
+    border-top: none;
+}
+.game-board .cell2,
+.game-board .cell5,
+.game-board .cell8{
+    border-right: none;
+}
+.game-board .cell6,
+.game-board .cell7,
+.game-board .cell8{
+    border-bottom: none;
+}
+.game-board .cell0,
+.game-board .cell3,
+.game-board .cell6{
+    border-left: none;
+}
